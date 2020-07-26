@@ -26,7 +26,6 @@
     <Folder Include="Controllers\" />
     <Folder Include="Infrastructure\" />
     <Folder Include="Views\" />
-    <Folder Include="Services\" />
   </ItemGroup>
   <!-- This target execute after "Build" target -->
   <Target Name="NopTarget" AfterTargets="Build">
