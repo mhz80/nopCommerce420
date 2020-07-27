@@ -1,15 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using Nop.Core;
 using Nop.Services.Plugins;
 
 namespace Nop.Plugin.Tutorial.DistOfCustByCountry
 {
     public class DistOfCustByCountryPlugin : BasePlugin
     {
-        public DistOfCustByCountryPlugin()
+        private readonly IWebHelper _webHelper;
+        public DistOfCustByCountryPlugin(IWebHelper webHelper)
         {
-
+            _webHelper = webHelper;
         }
 
         public override string GetConfigurationPageUrl()

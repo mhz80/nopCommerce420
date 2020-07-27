@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using Nop.Plugin.Tutorial.DistOfCustByCountry.Models;
+using Nop.Plugin.Tutorial.DistOfCustByCountry.Services.Directory;
 using Nop.Services.Common;
 using Nop.Services.Customers;
 using Nop.Services.Directory;
@@ -12,11 +13,11 @@ namespace Nop.Plugin.Tutorial.DistOfCustByCountry.Services
     public class CustomersByCountry : ICustomersByCountry
     {
         private readonly IAddressService _addressService;
-        private readonly ICountryService _countryService;
+        private readonly ICountryModifiedService _countryService;
         private readonly ICustomerService _customerService;
 
         public CustomersByCountry(IAddressService addressService,
-            ICountryService countryService,
+            ICountryModifiedService countryService,
             ICustomerService customerService)
         {
             _addressService = addressService;
